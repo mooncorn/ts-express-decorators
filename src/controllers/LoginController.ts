@@ -56,10 +56,4 @@ class LoginController {
 
     res.redirect("/");
   }
-
-  @get("/protected")
-  @use(requireAuth)
-  getProtected(req: Request, res: Response) {
-    res.send("Welcome to protected route");
-  }
 }
